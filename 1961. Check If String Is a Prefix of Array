@@ -1,0 +1,26 @@
+class Solution {
+    public boolean isPrefixString(String s, String[] words) {
+        
+        
+        String sentence="";
+        
+        if(words.length==1){
+            sentence=words[0];
+        }
+        
+        for(String word:words){
+            
+            if(s.equals(sentence)){
+                return true;
+            }
+            
+            sentence+=word;
+            // System.out.println(sentence);
+        }
+        
+         if(s.equals(sentence)){
+                return true;
+            }
+        return false;
+    }
+}
